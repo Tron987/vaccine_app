@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "679329728641",
+    "project_id": "vaccine-cc707",
+    "storage_bucket": "vaccine-cc707.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679329728641:android:afededb44bac6be2236580",
+        "android_client_info": {
+          "package_name": "com.example.covid_jan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679329728641-3cmf10d10f5nje3dkk8e13bnr6d8kpgg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.covid_jan",
+            "certificate_hash": "eb9fb70a080cff989a8a986ff2c01138f2198f3f"
+          }
+        },
+        {
+          "client_id": "679329728641-v0qat88np6si7l97872h4nj3ac8a3i3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXU5mlQGG9oV6Ea8ADRK_OmwZKleMsivU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679329728641-v0qat88np6si7l97872h4nj3ac8a3i3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
