@@ -25,6 +25,7 @@ class _RegisterScreenState extends State<RegisterPage> {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
       bool isloading = false;
+      bool _obscureText = true;
 
 
 
@@ -131,7 +132,7 @@ class _RegisterScreenState extends State<RegisterPage> {
               const SizedBox(height: 16.0),
               TextFormField(
                 controller: _passwordController,
-                obscureText: true,
+                obscureText: _obscureText,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color.fromARGB(255, 255, 252, 252).withOpacity(0.5),
@@ -146,7 +147,17 @@ class _RegisterScreenState extends State<RegisterPage> {
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                         borderRadius: BorderRadius.circular(30),
-                      ),
+                      ),contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                      suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _obscureText = !_obscureText;
+                            });
+                          },
+                          child: Icon(
+                            _obscureText ? Icons.visibility_off : Icons.visibility,
+                          ),
+                      )
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -161,7 +172,7 @@ class _RegisterScreenState extends State<RegisterPage> {
               const SizedBox(height: 16.0),
               TextFormField(
                 controller: _confirmPasswordController,
-                obscureText: true,
+                obscureText: _obscureText,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color.fromARGB(255, 255, 252, 252).withOpacity(0.5),
@@ -177,6 +188,17 @@ class _RegisterScreenState extends State<RegisterPage> {
                         borderSide: BorderSide(color: Colors.grey),
                         borderRadius: BorderRadius.circular(30),
                       ),
+                     contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                      suffixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _obscureText = !_obscureText;
+                            });
+                          },
+                          child: Icon(
+                            _obscureText ? Icons.visibility_off : Icons.visibility,
+                          ),
+                      ) 
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
